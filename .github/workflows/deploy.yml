@@ -1,0 +1,35 @@
+name: Deploy website to Nina
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: nuvexa-production
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure SSH
+        shell: bash
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          printf '%s\n' "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Deploy with rsync
+        shell: bash
+        run: |
+          rsync -az --delete             --exclude '.git/'             --exclude '.github/'             --exclude 'robots.txt'             -e "ssh -i ~/.ssh/id_ed25519 -p ${{ secrets.SSH_PORT }} -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes"             ./ "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/b6e40000-e6ac-491f-bb90-fa8133d281e7/public_html/"
