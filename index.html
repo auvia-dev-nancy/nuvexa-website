@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>NUVEXA ✦ Digital Atelier | Web Design, Branding & Mobile Apps</title>
+  <meta name="title" content="NUVEXA ✦ Digital Atelier | Web Design, Branding & Mobile Apps">
+  <meta name="description" content="Nuvexa is a premier digital design studio and engineering atelier crafting bespoke web platforms, iconic brand identities, and high-performance mobile applications for visionary brands worldwide.">
+  <meta name="keywords" content="Nuvexa, web design agency, branding studio, mobile app development, UI UX design, WebGL, luxury digital design">
+  <meta name="theme-color" content="#07090e">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nuvexa.studio/">
+  <meta property="og:title" content="NUVEXA ✦ Digital Atelier | Web Design, Branding & Mobile Apps">
+  <meta property="og:description" content="We architect digital elegance, iconic brand systems, and visionary mobile applications.">
+  <meta property="og:image" content="assets/images/hero_showcase.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nuvexa.studio/">
+  <meta property="twitter:title" content="NUVEXA ✦ Digital Atelier">
+  <meta property="twitter:description" content="We architect digital elegance, iconic brand systems, and visionary mobile applications.">
+  <meta property="twitter:image" content="assets/images/hero_showcase.jpg">
+
+  <!-- Favicon Monogram -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238b5cf6'/%3E%3Cstop offset='100%25' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%2307090e'/%3E%3Cpath d='M8 24V8l8 10 8-10v16' stroke='url(%23g)' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Interactive Canvas & Overlays -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="cursor-aura" aria-hidden="true"></div>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- ==========================================================================
+       Header & Floating Navigation Bar
+       ========================================================================== -->
+  <header class="header-wrapper" id="site-header">
+    <nav class="header-nav" aria-label="Main Navigation">
+      <a href="#hero" class="brand-logo" id="nav-brand-logo" aria-label="Nuvexa Home">
+        <div class="brand-icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 20V4l8 10 8-10v16" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <span>NUVEXA</span>
+      </a>
+
+      <ul class="nav-links" id="primary-nav-links">
+        <li class="nav-item"><a href="#expertise" class="nav-link" id="link-expertise">Expertise</a></li>
+        <li class="nav-item"><a href="#portfolio" class="nav-link" id="link-portfolio">Creations</a></li>
+        <li class="nav-item"><a href="#calculator" class="nav-link" id="link-calculator">Studio Estimator</a></li>
+        <li class="nav-item"><a href="#alchemy" class="nav-link" id="link-alchemy">Alchemy</a></li>
+        <li class="nav-item"><a href="#testimonials" class="nav-link" id="link-testimonials">Praise</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Sound FX Synthesizer Toggle -->
+        <button type="button" class="sound-toggle-btn" id="sound-toggle-btn" aria-label="Toggle Sound Effects">
+          <div class="sound-bars" aria-hidden="true">
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+          </div>
+          <span class="sound-btn-text">Sound: OFF</span>
+        </button>
+
+        <!-- Dynamic Theme Aura Selector -->
+        <div class="aura-selector" title="Switch Studio Aura Palette" aria-label="Color Aura Selector">
+          <button type="button" class="aura-dot active" data-theme-val="violet" aria-label="Nebula Violet Theme"></button>
+          <button type="button" class="aura-dot" data-theme-val="cyan" aria-label="Cyber Cyan Theme"></button>
+          <button type="button" class="aura-dot" data-theme-val="amber" aria-label="Solar Amber Theme"></button>
+          <button type="button" class="aura-dot" data-theme-val="emerald" aria-label="Emerald Prism Theme"></button>
+        </div>
+
+        <!-- Initiate Project CTA -->
+        <button type="button" class="btn-primary open-contact-modal-btn" id="nav-cta-btn">
+          <span>Start Project</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <div class="badge-pill">
+              <span class="pulse-dot"></span>
+              <span>STUDIO OF THE YEAR 2026 ✦ COMMISSIONS OPEN</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            We Architect <span class="gradient-text">Digital Elegance</span>, Iconic Brands & Visionary Apps.
+          </h1>
+
+          <p class="hero-desc">
+            Nuvexa is a boutique digital atelier. We partner with daring founders and world-leading enterprises to fuse avant-garde aesthetics with flawless engineering—delivering experiences that mesmerize and endure.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#portfolio" class="btn-primary" id="hero-explore-work-btn">
+              <span>Explore Flagship Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
+            <a href="#calculator" class="btn-secondary" id="hero-calc-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+              <span>Instant Project Estimator</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3D Interactive Hero Artwork Card -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-card-3d" id="hero-tilt-card">
+            <img src="assets/images/hero_showcase.jpg" alt="Nuvexa Futuristic Holographic Interface & Studio Artwork" id="hero-main-img">
+            
+            <!-- Floating Glass Badges -->
+            <div class="floating-badge floating-badge-1">
+              <div class="badge-icon">✦</div>
+              <div>
+                <div class="badge-text-primary">140+ Design Honors</div>
+                <div class="badge-text-sub">Awwwards, Red Dot & FWA of the Day</div>
+              </div>
+            </div>
+
+            <div class="floating-badge floating-badge-2">
+              <div class="badge-icon">⚡</div>
+              <div>
+                <div class="badge-text-primary">$480M+ Capital Added</div>
+                <div class="badge-text-sub">Client Valuation Scale Post-Launch</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Metrics & Marquee Section
+         ========================================================================== -->
+    <section class="metrics-section" aria-label="Studio Impact Statistics">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-value" data-target="480" data-prefix="$" data-suffix="M+">$0M+</div>
+            <div class="metric-label">Client Market Value Generated</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value" data-target="142" data-suffix="+">0+</div>
+            <div class="metric-label">International Design Awards</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value" data-target="99.2" data-suffix="%">0%</div>
+            <div class="metric-label">Client Satisfaction (CSAT)</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-value" data-target="42" data-suffix=" Countries">0</div>
+            <div class="metric-label">Global Presence & Distribution</div>
+          </div>
+        </div>
+
+        <!-- Client & Partner Marquee -->
+        <div class="marquee-container" aria-label="Brands We Elevated">
+          <div class="marquee-track">
+            <div class="partner-logo">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 22 22 22 12 2"></polygon></svg>
+              <span>AETHERIA LABS</span>
+            </div>
+            <div class="partner-logo">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              <span>AURORA ATELIER</span>
+            </div>
+            <div class="partner-logo">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"></rect><circle cx="12" cy="12" r="4"></circle></svg>
+              <span>KROMA DYNAMICS</span>
+            </div>
+            <div class="partner-logo">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+              <span>VELOCE MOTORS</span>
+            </div>
+            <div class="partner-logo">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <span>HYPERION VENTURES</span>
+            </div>
+            <div class="partner-logo">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><line x1="3" y1="12" x2="21" y2="12"></line></svg>
+              <span>SOLSTICE WEALTH</span>
+            </div>
+            <!-- Duplicated for seamless marquee loop -->
+            <div class="partner-logo">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 22 22 22 12 2"></polygon></svg>
+              <span>AETHERIA LABS</span>
+            </div>
+            <div class="partner-logo">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              <span>AURORA ATELIER</span>
+            </div>
+            <div class="partner-logo">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"></rect><circle cx="12" cy="12" r="4"></circle></svg>
+              <span>KROMA DYNAMICS</span>
+            </div>
+            <div class="partner-logo">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+              <span>VELOCE MOTORS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Expertise / Services Section
+         ========================================================================== */
+    -->
+    <section class="services-section" id="expertise">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Disciplines & Masteries</span>
+          <h2 class="section-title">Where Visionary Design Meets <span class="gradient-text">Relentless Engineering</span></h2>
+          <p class="section-desc">We do not believe in ordinary websites or commoditized apps. Every project we touch is sculpted into a competitive advantage.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Pillar 1: Web Design & Creative Engineering -->
+          <div class="service-card" id="service-card-web">
+            <div class="service-num">DISCIPLINE // 01</div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3>Bespoke Web Design & Creative Engineering</h3>
+            <p>We build award-caliber web environments with WebGL shaders, micro-kinetic typography, buttery 60fps animations, and uncompromising sub-second performance.</p>
+            <div class="service-tags">
+              <span class="service-tag">WebGL & Three.js</span>
+              <span class="service-tag">Interactive 3D Canvases</span>
+              <span class="service-tag">Headless Architectures</span>
+              <span class="service-tag">Ultra CWV Performance</span>
+            </div>
+            <div class="service-link open-contact-modal-btn">
+              <span>Commission Web Experience</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Iconic Brand Architecture -->
+          <div class="service-card" id="service-card-brand">
+            <div class="service-num">DISCIPLINE // 02</div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h3>Iconic Brand Architecture & Identity</h3>
+            <p>From strategic positioning and bespoke typography to 3D virtual brand worlds, we forge magnetic identities that command premium pricing and investor conviction.</p>
+            <div class="service-tags">
+              <span class="service-tag">Brand Genesis & DNA</span>
+              <span class="service-tag">Custom Typography & Monograms</span>
+              <span class="service-tag">Comprehensive Design Systems</span>
+              <span class="service-tag">3D Virtual Assets</span>
+            </div>
+            <div class="service-link open-contact-modal-btn">
+              <span>Forge Your Identity</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </div>
+
+          <!-- Pillar 3: High-Performance Mobile Apps -->
+          <div class="service-card" id="service-card-mobile">
+            <div class="service-num">DISCIPLINE // 03</div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
+            <h3>High-Performance Mobile Applications</h3>
+            <p>Tactile, intuitive native iOS & Android applications. We craft spatial haptic interactions, zero-friction onboarding, and offline-first reactive architectures that users fall in love with.</p>
+            <div class="service-tags">
+              <span class="service-tag">Native iOS & Swift</span>
+              <span class="service-tag">Flutter & React Native</span>
+              <span class="service-tag">Spatial & Haptic UI</span>
+              <span class="service-tag">Sub-50ms Synchronicity</span>
+            </div>
+            <div class="service-link open-contact-modal-btn">
+              <span>Build Flagship App</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </div>
+
+          <!-- Pillar 4: AI Systems & Autonomous UX -->
+          <div class="service-card" id="service-card-ai">
+            <div class="service-num">DISCIPLINE // 04</div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+            </div>
+            <h3>AI Experience Design & Autonomous UI</h3>
+            <p>Moving beyond chat boxes into proactive spatial intelligence. We build multimodal agent interfaces, predictive workflow canvases, and generative design pipelines for next-gen AI tech.</p>
+            <div class="service-tags">
+              <span class="service-tag">Agentic UX & Workflows</span>
+              <span class="service-tag">Real-time Streaming Interfaces</span>
+              <span class="service-tag">Voice & Multimodal UX</span>
+              <span class="service-tag">Generative Product Design</span>
+            </div>
+            <div class="service-link open-contact-modal-btn">
+              <span>Design AI Ecosystem</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Flagship Portfolio Showcase
+         ========================================================================== -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Selected Works</span>
+          <h2 class="section-title">Creations That <span class="gradient-text">Redefine Categories</span></h2>
+          <p class="section-desc">A curated exhibition of our recent collaborations across FinTech, luxury architecture, artificial intelligence, and automotive innovation.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="portfolio-filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all">All Creations</button>
+          <button type="button" class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button type="button" class="filter-btn" data-filter="web">Web Platforms</button>
+          <button type="button" class="filter-btn" data-filter="branding">Brand Systems</button>
+        </div>
+
+        <!-- Portfolio Cards Grid -->
+        <div class="portfolio-grid" id="portfolio-items-grid">
+          <!-- Project 1: Aetheria FinTech -->
+          <div class="project-card" data-category="mobile" data-project="aetheria" id="card-proj-aetheria">
+            <div class="project-thumb">
+              <span class="project-overlay-pill">MOBILE APP & BRAND</span>
+              <img src="assets/images/project_fintech.jpg" alt="Aetheria Luxury Fintech Mobile Application" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-client">Aetheria Digital Inc.</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">Aetheria Wealth OS</h3>
+              <p class="project-brief">Decentralized sovereign wealth & multi-chain portfolio application featuring fluid haptic analytics and Swiss-grade security UI.</p>
+              <div class="project-metrics-badge">
+                <span>✦ +310% App Store Conversion Rate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Aurora Architecture WebGL -->
+          <div class="project-card" data-category="web" data-project="aurora" id="card-proj-aurora">
+            <div class="project-thumb">
+              <span class="project-overlay-pill">WEB EXPERIENCE // 3D</span>
+              <img src="assets/images/project_architecture.jpg" alt="Aurora Atelier Architectural Studio Website" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-client">Aurora Atelier Paris</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">Aurora Studio Architecture</h3>
+              <p class="project-brief">Interactive WebGL architectural showcase featuring dynamic ambient lighting, real-time spatial walkthroughs, and editorial typography.</p>
+              <div class="project-metrics-badge">
+                <span>✦ Awwwards Site of the Month</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Kroma Autonomous AI -->
+          <div class="project-card" data-category="branding" data-project="kroma" id="card-proj-kroma">
+            <div class="project-thumb">
+              <span class="project-overlay-pill">BRANDING & SYSTEM</span>
+              <img src="assets/images/hero_showcase.jpg" alt="Kroma Dynamics AI Brand Genesis" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-client">Kroma Dynamics Corp.</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">Kroma Autonomous AI</h3>
+              <p class="project-brief">Brand genesis, mathematical visual identity, and comprehensive multi-platform design tokens for an enterprise AI agent platform.</p>
+              <div class="project-metrics-badge">
+                <span>✦ $85M Series B Post-Rebrand</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Veloce GT Automotive -->
+          <div class="project-card" data-category="mobile" data-project="veloce" id="card-proj-veloce">
+            <div class="project-thumb">
+              <span class="project-overlay-pill">MOBILE APP & TELEMETRY</span>
+              <img src="assets/images/project_fintech.jpg" alt="Veloce Hypercar Companion App Interface" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-client">Veloce Automobili</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">Veloce Hypercar Telemetry</h3>
+              <p class="project-brief">Real-time Bluetooth LE telemetry cockpit app streaming sub-50ms lap telemetry, aero dynamics, and thermal distributions.</p>
+              <div class="project-metrics-badge">
+                <span>✦ Nürburgring Validated Zero Latency</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Interactive Project Estimator / Studio Calculator
+         ========================================================================== -->
+    <section class="estimator-section" id="calculator">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Interactive Estimator</span>
+          <h2 class="section-title">Configure Your <span class="gradient-text">Project Vision</span></h2>
+          <p class="section-desc">Select your desired disciplines, product scope, and launch timeline for a transparent, real-time estimate backed by our dedicated sprint team.</p>
+        </div>
+
+        <div class="estimator-card">
+          <!-- Configuration Selectors -->
+          <div class="estimator-config-side">
+            <!-- 1. Services Required -->
+            <div class="config-group">
+              <label class="config-label">01 // Select Core Disciplines</label>
+              <div class="config-options-grid">
+                <button type="button" class="calc-choice-btn calc-service-btn selected" data-calc-service="web">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>Web Experience</span>
+                </button>
+                <button type="button" class="calc-choice-btn calc-service-btn selected" data-calc-service="branding">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>Brand Architecture</span>
+                </button>
+                <button type="button" class="calc-choice-btn calc-service-btn" data-calc-service="app">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>Mobile App (iOS/Android)</span>
+                </button>
+                <button type="button" class="calc-choice-btn calc-service-btn" data-calc-service="motion">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>3D Motion & WebGL</span>
+                </button>
+                <button type="button" class="calc-choice-btn calc-service-btn" data-calc-service="ai">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>AI UX & Agent System</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. Scale & Maturity -->
+            <div class="config-group">
+              <label class="config-label">02 // Target Scale & Scope</label>
+              <div class="config-options-grid">
+                <button type="button" class="calc-choice-btn calc-scale-btn" data-calc-scale="mvp">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>Launchpad MVP</span>
+                </button>
+                <button type="button" class="calc-choice-btn calc-scale-btn selected" data-calc-scale="market">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>Market Leader</span>
+                </button>
+                <button type="button" class="calc-choice-btn calc-scale-btn" data-calc-scale="enterprise">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>Global Enterprise</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 3. Velocity & Timeline -->
+            <div class="config-group">
+              <label class="config-label">03 // Deployment Velocity</label>
+              <div class="config-options-grid">
+                <button type="button" class="calc-choice-btn calc-timeline-btn" data-calc-timeline="rush">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>Rush Sprint (4–6 Wks)</span>
+                </button>
+                <button type="button" class="calc-choice-btn calc-timeline-btn selected" data-calc-timeline="standard">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>Standard (8–12 Wks)</span>
+                </button>
+                <button type="button" class="calc-choice-btn calc-timeline-btn" data-calc-timeline="phased">
+                  <div class="check-indicator"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                  <span>Phased Multi-Quarter</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Summary Output -->
+          <div class="estimator-summary-box">
+            <div class="summary-header">
+              <div class="badge-pill" style="margin-bottom:12px;">✦ STUDIO PROJECTION</div>
+              <h4>Investment Estimate</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted);">Calculated based on dedicated multi-disciplinary sprint capacity.</p>
+            </div>
+
+            <div class="summary-price-display">
+              <div class="price-sub-label">Estimated Range (USD)</div>
+              <div class="price-number" id="calc-price-output">$25,500 – $34,500</div>
+              <div class="price-sub-label" id="calc-timeline-output" style="margin-top:8px; color:var(--aura-primary);">Est. Timeline: ~5 Sprints (10 Weeks)</div>
+            </div>
+
+            <div>
+              <div class="price-sub-label" style="margin-bottom:12px;">Deliverables Included:</div>
+              <ul class="summary-deliverables-list" id="calc-deliverables-list">
+                <!-- Populated dynamically via JS -->
+              </ul>
+            </div>
+
+            <button type="button" class="btn-primary" id="lock-estimator-config-btn" style="width:100%;">
+              <span>Lock In Configuration & Transmit</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         The Alchemy Process Section
+         ========================================================================== -->
+    <section class="alchemy-section" id="alchemy">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Methodology & Rigor</span>
+          <h2 class="section-title">The Nuvexa <span class="gradient-text">Alchemy</span></h2>
+          <p class="section-desc">How we transform raw ambition into industry-defining digital milestones through structured creative sprints.</p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step active" id="process-step-1">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Deep Immersion & Brand DNA</h3>
+            <p class="step-desc">We extract your core ethos, analyze competitive friction, and define the unmistakable artistic thesis that will set you leagues apart.</p>
+          </div>
+
+          <div class="process-step" id="process-step-2">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Rapid Spatial Prototyping</h3>
+            <p class="step-desc">No flat boring wireframes. We prototype interactive kinetic systems, micro-animations, and spatial layout flow within the first 10 days.</p>
+          </div>
+
+          <div class="process-step" id="process-step-3">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Precision Engineering & QA</h3>
+            <p class="step-desc">Clean, decoupled, lightning-fast architecture. Rigorously load-tested across global devices with zero visual compromises and high accessibility.</p>
+          </div>
+
+          <div class="process-step" id="process-step-4">
+            <div class="step-num">04</div>
+            <h3 class="step-title">Hyper-Scale Launch & Growth</h3>
+            <p class="step-desc">Flawless orchestrated deployment with analytics telemetry, PR assets, investor kits, and continuous high-velocity roadmap sprints.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Client Praise & Testimonials
+         ========================================================================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Client Endorsements</span>
+          <h2 class="section-title">Validated By <span class="gradient-text">Category Leaders</span></h2>
+          <p class="section-desc">Hear directly from the visionary executives who entrusted Nuvexa with their most ambitious flagship products.</p>
+        </div>
+
+        <div class="testimonials-slider-container">
+          <div class="testimonial-card-single">
+            <div class="quote-icon">“</div>
+            <p class="testimonial-quote" id="testimonial-quote-text">
+              “Nuvexa redesigned our entire mobile ecosystem. Within 90 days of launch, our retention increased by 64% and we secured our Series B round. Their aesthetic craftsmanship and engineering speed are truly supernatural.”
+            </p>
+            <div class="client-author-info">
+              <div class="client-avatar" id="testimonial-avatar-text">ER</div>
+              <div class="client-details">
+                <div class="client-name" id="testimonial-author-name">Elena Rostova</div>
+                <div class="client-role" id="testimonial-author-role">Founder & Chief Executive, Aetheria Labs</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-nav-btns">
+            <button type="button" class="slider-btn" id="testimonial-prev-btn" aria-label="Previous Testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="slider-btn" id="testimonial-next-btn" aria-label="Next Testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Grand Call to Action Banner
+         ========================================================================== -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 class="cta-title">Have a Visionary Project in Mind? <br><span class="gradient-text">Let’s Make It Immortal.</span></h2>
+          <p class="cta-subtitle">We selectively partner with only 3 new visionary brands per quarter to maintain an obsessive level of devotion to craftsmanship.</p>
+          <div class="cta-buttons">
+            <button type="button" class="btn-primary open-contact-modal-btn" id="banner-contact-btn">
+              <span>Initiate Project Consultation</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer Section
+       ========================================================================== -->
+  <footer class="footer-main" id="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="#hero" class="brand-logo">
+            <div class="brand-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 20V4l8 10 8-10v16" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            </div>
+            <span>NUVEXA</span>
+          </a>
+          <p>
+            An elite digital atelier sculpting high-converting web experiences, iconic brand identities, and next-generation mobile applications.
+          </p>
+          <div class="studio-status-indicator">
+            <span class="status-dot"></span>
+            <span>STUDIO CAPACITY: 1 COMMISSIONS OPEN</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Expertise</div>
+          <ul class="footer-links-list">
+            <li><a href="#expertise">Creative Web Experiences</a></li>
+            <li><a href="#expertise">Brand Identity Systems</a></li>
+            <li><a href="#expertise">Mobile App Engineering</a></li>
+            <li><a href="#expertise">AI Product Architecture</a></li>
+            <li><a href="#expertise">WebGL & 3D Shaders</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Studio</div>
+          <ul class="footer-links-list">
+            <li><a href="#portfolio">Curated Works</a></li>
+            <li><a href="#alchemy">The Alchemy</a></li>
+            <li><a href="#calculator">Estimator Engine</a></li>
+            <li><a href="#testimonials">Client Praise</a></li>
+            <li><a href="#contact" class="open-contact-modal-btn">Direct Inquiry</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Studio Dispatch</div>
+          <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:14px;">Receive quarterly essays on design philosophy, WebGL shaders, and brand supremacy.</p>
+          <form id="footer-newsletter-form" style="display:flex; gap:8px;">
+            <input type="email" placeholder="executive@company.com" required style="padding:10px 14px; background:rgba(255,255,255,0.05); border:1px solid var(--border-glass); border-radius:var(--border-radius-md); color:#fff; font-size:0.85rem; width:100%; outline:none;">
+            <button type="submit" class="btn-primary" style="padding:10px 18px;" aria-label="Subscribe to Studio Dispatch">✦</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-world-clocks">
+          <div class="clock-item">SF: <span id="clock-sf">--:--</span></div>
+          <div class="clock-item">LON: <span id="clock-lon">--:--</span></div>
+          <div class="clock-item">TYO: <span id="clock-tyo">--:--</span></div>
+          <div class="clock-item">DXB: <span id="clock-dxb">--:--</span></div>
+        </div>
+        <div>
+          © 2026 Nuvexa Digital Atelier. All Rights Reserved. Engineered with Pride & Obsession.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Project Case Study Modal
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" aria-label="Close Project Modal">✕</button>
+      
+      <div style="margin-bottom:20px;">
+        <span class="badge-pill" id="modal-project-category" style="margin-bottom:12px;">CATEGORY</span>
+        <h2 id="modal-project-title" style="font-size:2.2rem; margin-top:8px; margin-bottom:6px;">Project Title</h2>
+        <div style="display:flex; gap:24px; color:var(--text-muted); font-family:var(--font-mono); font-size:0.85rem;">
+          <div>CLIENT: <span id="modal-project-client" style="color:#fff;">Client Name</span></div>
+          <div>YEAR: <span id="modal-project-year" style="color:#fff;">2026</span></div>
+        </div>
+      </div>
+
+      <div style="border-radius:var(--border-radius-lg); overflow:hidden; border:1px solid var(--border-glass); margin-bottom:28px;">
+        <img id="modal-project-img" src="" alt="Project Showcase" style="width:100%; height:auto; display:block; max-height:420px; object-fit:cover;">
+      </div>
+
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1.15rem; color:var(--aura-primary); margin-bottom:8px; font-family:var(--font-mono); text-transform:uppercase;">The Challenge</h4>
+        <p id="modal-project-challenge" style="font-size:0.98rem; line-height:1.7;"></p>
+      </div>
+
+      <div style="margin-bottom:24px;">
+        <h4 style="font-size:1.15rem; color:var(--aura-primary); margin-bottom:8px; font-family:var(--font-mono); text-transform:uppercase;">The Nuvexa Solution</h4>
+        <p id="modal-project-solution" style="font-size:0.98rem; line-height:1.7;"></p>
+      </div>
+
+      <div style="margin-bottom:28px;">
+        <h4 style="font-size:1.15rem; color:var(--aura-primary); margin-bottom:12px; font-family:var(--font-mono); text-transform:uppercase;">Impact & Metrics</h4>
+        <ul id="modal-project-results" style="list-style:none; display:grid; gap:10px; color:var(--text-main);">
+          <!-- Results populated dynamically -->
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="font-size:1.15rem; color:var(--aura-primary); margin-bottom:12px; font-family:var(--font-mono); text-transform:uppercase;">Architecture & Tools</h4>
+        <div id="modal-project-stack" class="service-tags">
+          <!-- Stack tags populated dynamically -->
+        </div>
+      </div>
+
+      <div style="margin-top:36px; padding-top:24px; border-top:1px solid var(--border-subtle); display:flex; justify-content:flex-end;">
+        <button type="button" class="btn-primary open-contact-modal-btn">
+          <span>Inquire About Similar Build</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Project Consultation & Inquiry Modal
+       ========================================================================== -->
+  <div class="modal-backdrop" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-contact-heading">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" aria-label="Close Contact Modal">✕</button>
+      
+      <div style="text-align:center; max-width:540px; margin:0 auto 28px auto;">
+        <span class="badge-pill" style="margin-bottom:12px;">✦ PRIVATE COMMISSIONS</span>
+        <h2 id="modal-contact-heading" style="font-size:2rem; margin-bottom:8px;">Initiate Your Partnership</h2>
+        <p style="font-size:0.95rem;">Tell us about your organization and the milestone you aim to conquer. Our partners respond within 4 business hours.</p>
+      </div>
+
+      <form id="nuvexa-inquiry-form">
+        <div class="form-grid">
+          <div>
+            <label class="form-label" for="contact-name">Your Full Name *</label>
+            <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alexander Vance" required>
+          </div>
+
+          <div>
+            <label class="form-label" for="contact-email">Corporate Email *</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="vance@enterprise.com" required>
+          </div>
+
+          <div>
+            <label class="form-label" for="contact-company">Company / Organization *</label>
+            <input type="text" id="contact-company" class="form-input" placeholder="e.g. Apex Hyperion" required>
+          </div>
+
+          <div>
+            <label class="form-label" for="contact-budget">Estimated Budget Range</label>
+            <select id="contact-budget" class="form-select">
+              <option value="15k-30k">$15,000 – $30,000</option>
+              <option value="30k-60k" selected>$30,000 – $60,000</option>
+              <option value="60k-120k">$60,000 – $120,000</option>
+              <option value="120k+">$120,000+ (Enterprise Retainer)</option>
+            </select>
+          </div>
+
+          <div class="form-group-full">
+            <label class="form-label" for="contact-message">Project Vision & Objective *</label>
+            <textarea id="contact-message" class="form-textarea" placeholder="Detail your project scope, target timeline, or reference brands..." required></textarea>
+          </div>
+
+          <div class="form-group-full">
+            <button type="submit" class="btn-primary" style="width:100%; padding:15px;" id="submit-inquiry-btn">
+              <span>Submit Project Inquiry</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Bundle -->
+  <script src="js/main.js"></script>
+</body>
+</html>
